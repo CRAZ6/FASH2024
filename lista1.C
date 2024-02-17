@@ -20,23 +20,64 @@ void q03() {
     int num2=8;
     int num3=12;
     float mediaarit=(num1 + num2 + num3)/3.0;
-    printf(" A média de %d %d %d é %2.f ",num1 , num2, num3, mediaarit);
+    printf(" A média de %d %d %d é %.2f ",num1 , num2, num3, mediaarit);
 }
 //4. Faça um programa que leia e imprima um número inteiro.
+void q04()
+{
+  int numero;
+  printf("Digite um numero inteiro");
+  scanf("%d",&numero);
+  printf("O numero é inteiro é: %d", numero);
 
+}
 //5. Faça um programa que leia dois números reais e os imprima.
+void q05()
+{
+  float numero1,numero2;
+  printf("Digite dois numeros reais");
+  scanf("%f %f",&numero1,&numero2);
+  printf("Os numeros reais são: %.2f e %.2f", numero1,numero2);
 
+}
 //6. Faça um programa que leia um número inteiro e imprima o seu
 //   antecessor e o seu sucessor.
+void q06()
+{
+  int numero;
+  printf("Digite um numero inteiro");
+  scanf("%d",&numero);
+  printf("O numero antecessor é %d e o numero sucessor é %d", numero-1,numero+1);
 
+}
 //7. Faça um programa que leia o nome o endereço e o telefone de
 //   um cliente e ao final, imprima esses dados.
+void q07()
+{
+  int numero;
+  printf("Digite um numero inteiro");
+  scanf("%d",&numero);
+  printf("O numero antecessor é %d e o numero sucessor é %d", numero-1,numero+1);
 
+}
 //8. Faça um programa que leia dois números inteiros e imprima a
 //   subtração deles.
+void q08()
+{
+  int numero1,numero2;
+  printf("Digite dois numeros inteiro: \n");
+  scanf("%d %d", &numero1,&numero2);
+  printf("O resultado da subtração é: %d  ", numero1-numero2);
 
+}
 //9. Faça um programa que leia umnúmero real e imprima ¼ deste número.
-
+void q09()
+{
+  float numero;
+  printf("Digite o numero real: \n");
+  scanf("%f", &numero);
+  printf("Um quarto deste numero real é: %.2f  ", numero/4);
+}
 //10. Faça um programa que leia três números reais e calcule a
 //    média aritmética destes números. Ao final, o programa deve
 //    imprimir o resultado do cálculo.
@@ -96,6 +137,6 @@ void q03() {
 //    necessário também ler o valor da cotação do dólar.
 
 int main(){
-    q03();
+    q09();
         return EXIT_SUCCESS;
 }
