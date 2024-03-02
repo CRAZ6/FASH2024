@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <math.h>
 /*
 Exercícios sobre os comandos básicos em C
 */
@@ -52,12 +52,15 @@ void q06()
 }
 //7. Faça um programa que leia o nome o endereço e o telefone de
 //   um cliente e ao final, imprima esses dados.
-void q07()
-{
-  int numero;
-  printf("Digite um numero inteiro");
-  scanf("%d",&numero);
-  printf("O numero antecessor é %d e o numero sucessor é %d", numero-1,numero+1);
+void q07() {
+    char nome[50], endereco[70], telefone[14];
+    printf("Nome: ");
+    scanf(" %50[^\n]",nome);
+    printf("Endereço: ");
+    scanf(" %70[^\n]",endereco);
+    printf("Telefone: ");
+    scanf(" %14[^\n]",telefone);
+    printf("Nome: %s\nEndereço: %s\nTelefone: %s\n",nome,endereco,telefone);
 
 }
 //8. Faça um programa que leia dois números inteiros e imprima a
@@ -81,16 +84,33 @@ void q09()
 //10. Faça um programa que leia três números reais e calcule a
 //    média aritmética destes números. Ao final, o programa deve
 //    imprimir o resultado do cálculo.
-
+void q10()
+{
+  float num1,num2,num3;
+  printf("Digite os numero reais : \n");
+  scanf("%f %f %f", &num1,&num2,&num3);
+  printf("A média destes números é: %.2f  ", (num1+num2+num3)/3);
+}
 //11. Faça um programa que leia dois números reais e calcule as
 //    quatro operações básicas entre estes dois números, adição,
 //    subtração,multiplicação e divisão. Ao final, o programa
 //    deve imprimir os resultados dos cálculos.
-
+void q11()
+{
+  float num1,num2;
+  printf("Digite os numero reais : \n");
+  scanf("%f %f", &num1,&num2);
+  printf("A soma destes dois números é: %.2f, a subtração é %.2f, a multiplicação é %.2f, a divisão é %.2f ", num1+num2,num1-num2,num1*num2,num1/num2);
+}
 //12. Faça um programa que leia um número real e calcule o
 //    quadrado deste número. Ao final, o programa deve
 //    imprimir o resultado do cálculo.
-
+void q12(){
+float numero;
+  printf("Digite o numero real: \n");
+  scanf("%f", &numero);
+  printf("O quadrado deste número é: %.2f  ",numero*numero);
+  }
 //13. Faça um programa que leia o saldo de uma conta poupança e
 //    imprima o novo saldo, considerando um reajuste de 2%.
 
@@ -137,6 +157,6 @@ void q09()
 //    necessário também ler o valor da cotação do dólar.
 
 int main(){
-    q09();
+    q12();
         return EXIT_SUCCESS;
 }
