@@ -169,10 +169,11 @@ resultado=(9*34.5 +160)/5;
 //    Ao final, o programa deverá imprimir a distância percorrida e a
 //    quantidade de litros consumidos na viagem.
 void q18(){
-float l,t,d,v,,totalconsumido;
-t=d/v;
-v=d/t;
-  printf("A temperatura de %.2f° em fahrenheit é de: %.2f  ",centigrados,resultado);
+float l,t=2.5,d,v=130,totalconsumido;
+d=t*v;
+l=d/12;
+  printf("A distância percorrida é de: %.2f \n",d);
+  printf("A quantidade de litros consumidos na viagem foi de: %.2f \n",l);
   }
 //19. Faça um programa que calcule o valor de uma prestação em atraso.
 //    Para isso, o programa deve ler o valor da prestação vencida, a
@@ -180,12 +181,28 @@ v=d/t;
 //    programa deve imprimir o valor da prestação atrasada, o período
 //    de atraso, os juros que serão cobrados pelo período de atraso, o
 //    valor da prestação acrescido dos juros. Considere juros simples.
-
+void q19(){
+float vencida=200.00,taxaperiodica=1/100.0,atraso=15.0,juro;
+juro=atraso*taxaperiodica;
+  printf("O valor da prestação atrasada é de: %.2f \n",vencida);
+  printf("O período de atraso é de: %.2f \n",atraso);
+  printf("O juros que será cobrado é de: %.2f %% \n",juro*100);
+  printf("O valor da prestação acrescido do juros é de: %.2f \n",vencida+vencida*juro);
+  }
 //20. Faça um programa que efetue a apresentação do valor da conversão
 //    em real (R$) de um valor lido em dólar (US$). Para isso, será
 //    necessário também ler o valor da cotação do dólar.
-
+void q20(){
+float real,dolar,conversao,cotacao;
+  printf("Digite o valor em dólar: ");
+  scanf("%f", &dolar);
+  printf("Digite a cotação do dólar: ");
+  scanf("%f",&cotacao);
+  conversao=dolar*cotacao;
+  printf("A cotação do dolar é de: %.2f \n",cotacao);
+  printf("O valor em real é de: %.2f \n",conversao);
+  }
 int main(){
-    q17();
+    q20();
         return EXIT_SUCCESS;
 }
