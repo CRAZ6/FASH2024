@@ -9,27 +9,70 @@ EXERCÍCIOS DO CAPÍTULO 2
 
 //1. Faça um programa que leia dois valores numéricos inteiros e efetue a adição, caso o resultado seja maior que 10, apresentá-lo.
 void questao01() {
+	int num1,num2,resultado;
+	printf("Digite o primeiro número: \n");
+    scanf("%d",&num1);
+printf("Digite o segundo número: \n");
+    scanf("%d",&num2);
+	resultado=num1+num2;
+if(resultado>10)
+{
+printf("O resultado da soma é: %d",resultado);
+}
 
 }
 
 //2. Faça um programa que leia dois valores inteiros e efetue a adição. Caso o valor somado seja maior que 20, este deverá ser apresentado somando-se a ele mais 8, caso o valor somado seja menor ou igual a 20, este deverá ser apresentado subtraindo-se 5.
 void questao02() {
-
+int num1,num2,resultado;
+	printf("Digite o primeiro número: \n");
+    scanf("%d",&num1);
+	printf("Digite o segundo número: \n");
+    scanf("%d",&num2);
+	resultado=num1+num2;
+	if(resultado>20){
+resultado=resultado+8;
+printf("O resultado da soma é: %d \n",resultado);
+	}
 }
 
 //3. Faça um programa que leia um número e imprima uma das duas mensagens: "É múltiplo de 3"ou "Não é múltiplo de 3".
 void questao03() {
-	
+	int num1;
+	printf("Digite um número: \n");
+    scanf("%d",&num1);
+	if(num1%3==0){
+printf("O número é múltiplo de 3 \n");
+	}
+	else{
+		printf("O número não é múltiplo de 3 \n");
+	}
 }
 
 //4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 void questao04() {
-	
+	int num1;
+	printf("Digite um número: \n");
+    scanf("%d",&num1);
+	if(num1%5==0){
+printf("O número é divisivel por 5\n");
+	}
+	else{
+		printf("O número não é divisivel por 5 \n");
+	}
 }
 
 //5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 void questao05() {
-
+int num1;
+	printf("Digite um número: \n");
+    scanf("%d",&num1);
+	if(num1%3==0 && num1%7==0){
+printf("O número é divisivel por 3 e 7\n");
+	}
+	else{
+		printf("O número não é divisivel por 3 e 7\n");
+	}
 }
 
 //6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
@@ -37,7 +80,18 @@ void questao05() {
 //bruto. Faça um programa em linguagem C que permita entrar com o salário bruto e o
 //valor da prestação e informar se o empréstimo pode ou não ser concedido.
 void questao06() {
-
+float bruto,prestacao,calculodaprestacao;
+	printf("Digite o salario bruto: \n");
+    scanf("%f",&bruto);
+	printf("Digite o valor da prestação: \n");
+    scanf("%f",&prestacao);
+	calculodaprestacao=0.3f*bruto;
+	if(prestacao<=calculodaprestacao){
+printf("O emprestimo pode ser concedido");
+	}
+	else{
+		printf("O emprestimo nao pode ser concedido \n");
+	}
 }
 
 //7. Faça um programa que leia um número e indique se o número está compreendido
@@ -198,9 +252,27 @@ int main() {
 		case 2:
 			questao02();
 			break;
+	    case 3:
+			questao03();
+			break;
+	    case 4:
+			questao04();
+			break;
 		case 5:
 			questao05();
-			break;			
+			break;
+		case 6:
+			questao06();
+			break;		
+		case 7:
+			questao07();
+			break;		
+		case 8:
+			questao08();
+			break;		
+		case 9:
+			questao09();
+			break;					
 		case 10:
 			questao10();
 			break;
