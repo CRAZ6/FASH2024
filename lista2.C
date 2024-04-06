@@ -97,26 +97,90 @@ printf("O emprestimo pode ser concedido");
 //7. Faça um programa que leia um número e indique se o número está compreendido
 //entre 20 e 50 ou não.
 void questao07() {
-
+float num;
+	printf("Digite um número\n");
+    scanf("%f",&num);
+	if(num>=20 && num<=50){
+printf("O número %.2f está compreendido entre 20 e 50 \n",num);
+	}
+	else{
+		printf("O número %.2f não está compreendido entre 20 e 50 \n",num);
+	}
 }
 
 //8. Faça um programa que leia um número e imprima uma das mensagens: 
 //"Maior do que 20", "Igual a 20"ou "Menor do que 20".
 void questao08() {
-	
+	float num;
+	printf("Digite um número\n");
+    scanf("%f",&num);
+	if(num>20){
+printf("Maior do que 20 \n");
+	}
+	else
+	if(num>=20){
+printf("Igual a 20 \n");
+	}
+	else
+	if(num<20){
+printf("Menor do que 20 \n");
+	}
 }
 
 //9. Faça um programa que permita entrar com o ano de nascimento da pessoa e como ano
 //atual. O programa deve imprimir a idade da pessoa. Não se esqueça de verificar se o
 //ano de nascimento informado é válido.
 void questao09() {
-	
+	int nascimento,ano,idade;
+	printf("Digite seu ano de nascimento\n");
+    scanf("%d",&nascimento);
+	printf("Digite o ano atual \n");
+    scanf("%d",&ano);
+	idade=ano-nascimento;
+
+	if(idade>0 && nascimento>0 && nascimento<ano){
+printf("A idade é %d \n",idade);
+	}
+	else
+	if(nascimento<ano){
+printf("O valor do nascimento é invalido \n");
+	}
 }
 
 //10. Faça um programa que leia três números inteiros e imprima os três em ordem
 //crescente.
 void questao10() {
-
+float num1,num2,num3;
+	printf("Digite um número\n");
+    scanf("%f",&num1);
+	printf("Digite um número\n");
+    scanf("%f",&num2);
+	printf("Digite um número\n");
+    scanf("%f",&num3);
+	if(num1<num2 && num2<num3)
+	{
+printf(" %f , %f , %f \n",num3,num2,num1);
+		}
+	if(num3<num2 && num2<num1)
+	{
+printf(" %f , %f , %f \n",num1,num2,num3);
+		}
+	if(num1<num3 && num3<num2)
+	{
+printf(" %f , %f , %f \n",num2,num3,num1);
+		}
+	if(num1<num3 && num3<num3)
+	{
+printf(" %f , %f , %f \n",num1,num3,num2);
+		}
+	if(num2>num1 && num2>num3)
+{
+printf(" %f , %f , %f \n",num2,num3,num1);
+		}
+	if(num3>num2 && num3>num1)
+	{
+printf(" %f , %f , %f \n",num3,num1,num2);
+		}
 }
 
 //11. Faça um programa que leia 3 números e imprima o maior deles.
@@ -275,6 +339,51 @@ int main() {
 			break;					
 		case 10:
 			questao10();
+			break;
+		case 101:
+			questao11();
+			break;
+		case 12:
+			questao12();
+			break;
+		case 13:
+			questao13();
+			break;
+		case 14:
+			questao14();
+			break;
+		case 15:
+			questao15();
+			break;
+		case 16:
+			questao16();
+			break;
+		case 17:
+			questao17();
+			break;
+		case 18:
+			questao18();
+			break;
+		case 19:
+			questao19();
+			break;
+		case 20:
+			questao20();
+			break;
+		case 21:
+			questao21();
+			break;
+		case 22:
+			questao22();
+			break;
+		case 23:
+			questao23();
+			break;
+		case 24:
+			questao24();
+			break;
+		case 25:
+			questao25();
 			break;
 		default:
 			printf("Opção inválida!");
