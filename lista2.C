@@ -185,6 +185,25 @@ printf(" %f , %f , %f \n",num3,num1,num2);
 
 //11. Faça um programa que leia 3 números e imprima o maior deles.
 void questao11() {
+	float num1,num2,num3;
+	printf("Digite um número\n");
+    scanf("%f",&num1);
+	printf("Digite um número\n");
+    scanf("%f",&num2);
+	printf("Digite um número\n");
+    scanf("%f",&num3);
+	if(num1<num2 && num2<num3)
+	{
+printf(" %.2f \n",num3);
+		}
+	if(num3<num2 && num2<num1)
+	{
+printf(" %.2f \n",num1);
+		}
+	if(num1<num3 && num3<num2)
+	{
+printf(" %.2f \n",num2);
+		}
 	
 }
 
@@ -193,13 +212,60 @@ void questao11() {
 //• Se é menor de idade
 //• Se é maior de 65 anos
 void questao12() {
-	
+	int idade;
+	printf("Digite sua idade\n");
+    scanf("%d",&idade);
+
+	if(idade>18 && idade<=65)
+	{
+printf("Você é maior de idade");
+    }
+	if(idade<18)
+	{
+printf("Você é menor de idade");
+		}
+	if(idade>65 && idade>18){
+	printf("Você é maior de idade e tem mais de 65 anos");
+	}
+		
 }
 
 //13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota da
-//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
+//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens:
+// "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
 void questao13() {
-	
+	char nome[50] ;
+	int nota1,nota2,media;
+	printf("Digite seu nome \n");
+    scanf("%c",&nome);
+    printf("Insira sua nota da prova1 \n");
+    scanf("%d",&nota1);
+	printf("Insira sua nota da prova2 \n");
+    scanf("%d",&nota2);
+	media=(nota1+nota2)/2;
+	if(media>=7)
+	{
+		printf("A sua nota da prova 1 é: %d \n", nota1);
+		printf("A sua nota da prova 2 é: %d \n", nota2);
+		printf("A sua media é: %d \n", media);
+printf("Você está aprovado \n");
+    }
+	else
+	if(media<3)
+	{
+		printf("A sua nota da prova 1 é: %d \n", nota1);
+		printf("A sua nota da prova 2 é: %d \n", nota2);
+		printf("A sua media é: %d \n", media);
+printf("Você está reprovado \n");
+    }
+	else
+	if(media>=3 && media<7)
+	{
+		printf("A sua nota da prova 1 é: %d \n", nota1);
+		printf("A sua nota da prova 2 é: %d \n", nota2);
+		printf("A sua media é: %d \n", media);
+printf("Você está de prova final \n");
+    }
 }
 
 //14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
@@ -340,7 +406,7 @@ int main() {
 		case 10:
 			questao10();
 			break;
-		case 101:
+		case 11:
 			questao11();
 			break;
 		case 12:
