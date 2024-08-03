@@ -234,14 +234,14 @@ printf("Você é menor de idade");
 //prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens:
 // "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
 void questao13() {
-	char nome[50] ;
+	char nome[50];
 	int nota1,nota2,media;
 	printf("Digite seu nome \n");
-    scanf("%c",&nome);
-    printf("Insira sua nota da prova1 \n");
-    scanf("%d",&nota1);
-	printf("Insira sua nota da prova2 \n");
-    scanf("%d",&nota2);
+    scanf(" %50[^\n]",nome);
+    printf("Insira sua nota da prova 1 \n");
+    scanf(" %d",&nota1);
+	printf("Insira sua nota da prova 2 \n");
+    scanf(" %d",&nota2);
 	media=(nota1+nota2)/2;
 	if(media>=7)
 	{
@@ -276,13 +276,46 @@ printf("Você está de prova final \n");
 //Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 //Maior que R$2000,00 30%
 void questao14() {
-	
-}
+	float sala,desconto;
+	printf("Digite seu salario\n");
+    scanf(" %f",&sala);
 
+	if(sala<=600)
+	{
+		printf("Isento de desconto \n");
+	}
+	else
+	if(sala>600 && sala<=1200){
+
+		printf("O desconto é de %.2f \n",sala*20/100);
+	}
+	else
+	if(sala>1200 && sala<=2000){
+		printf("O desconto é de %.2f \n",sala*25/100);
+    }
+else
+	if(sala>2000){
+		printf("O desconto é de %.2f \n",sala*30/100);
+		
+    }
+}
+	
 //15. Um comerciante comprou umproduto e quer vendê-lo com umlucro de 45% se o valor
 //da compra for menor que R$20,00, caso contrário, o lucro será de 30%. Faça um programa que leia o valor do produto e imprima o valor da venda.
 void questao15() {
-	
+	float preco;
+	printf("Informe o valor de compra do produto \n");
+    scanf(" %f",&preco);
+
+	if(preco<20)
+	{
+		printf("Deve vender o produto por %.2f \n",(preco*45/100)+preco);
+	}
+	else
+	if(preco>20){
+
+		printf("Deve vender o produto por %.2f \n",(preco*30/100)+preco);
+	}
 }
 
 //16. A confederação brasileira de natação irá promover eliminatórias para o próximo
