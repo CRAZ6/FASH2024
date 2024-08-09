@@ -327,7 +327,34 @@ void questao15() {
 //Juvenil B 14 - 17 anos
 //Sênior maiores de 18 anos
 void questao16() {
-	
+	int idade;
+	printf("Informe sua idade \n");
+    scanf("%d",&idade);
+
+	if(idade>=5 && idade<=7)
+	{
+		printf("Categoria infantil A \n");
+	}
+	else
+	if(idade>=8 && idade<=10){
+
+		printf("Categoria infantil B \n");
+	}
+	else
+	if(idade>=11 && idade<=13){
+
+		printf("Categoria Juvenil A \n");
+	}
+	else
+	if(idade>=14 && idade<=17){
+
+		printf("Categoria Juvenil B \n");
+	}
+	else
+	if(idade>=18){
+
+		printf("Categoria Senior \n");
+	}
 }
 
 //17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas começaram a fazer pesquisas para descobrir um bom plano, não muito caro. Umvendedor de um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
