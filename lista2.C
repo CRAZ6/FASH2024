@@ -357,7 +357,8 @@ void questao16() {
 	}
 }
 
-//17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas começaram a fazer pesquisas para descobrir um bom plano, não muito caro. Umvendedor de um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
+//17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas começaram a fazer pesquisas para descobrir um bom plano, não muito caro.
+// Umvendedor de um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
 //Idade Valor
 //Até 10 anos R$30,00
 //Acima de 10 até 29 anos R$60,00
@@ -366,20 +367,159 @@ void questao16() {
 //Acima de 59 até 65 anos R$250,00
 //Maior que 65 anos R$400,00
 void questao17() {
-	
+	int idade;
+	char nome[50];
+	printf(" Insira seu nome \n");
+	scanf(" %50[^\n]",nome);
+	printf("Informe sua idade \n");
+    scanf("%d",&idade);
+
+	if(idade<=10)
+	{
+		printf("Você %s terá que pagar 30,00 \n",nome);
+	}
+	else
+	if(idade>=11 && idade<=29){
+
+		printf("Você %s terá que pagar 60,00 \n",nome);
+	}
+	else
+	if(idade>=30 && idade<=45){
+
+		printf("Você %s terá que pagar 120,00 \n",nome);
+	}
+	else
+	if(idade>=46 && idade<=59){
+
+		printf("Você %s terá que pagar 150,00 \n",nome);
+	}
+	else
+	if(idade>=60 && idade<=65){
+
+		printf("Você %s terá que pagar 250,00 \n",nome);
+	}
+	else
+	if(idade>=65){
+
+		printf("Você %s terá que pagar 400,00 \n",nome);
+	}
 }
 
-//18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês correspondente. Caso o usuário digite umnúmero fora desse intervalo, deverá aparecer uma mensagem informando que não existe mês com este número. Utilize o switch para este problema.
+//18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês correspondente.
+// Caso o usuário digite umnúmero fora desse intervalo, deverá aparecer uma mensagem informando que não existe mês com este número. Utilize o switch para este problema.
 void questao18() {
+	int numero;
 	
+	printf(" Insira um numero de 1 a 12 \n");
+	scanf(" %d",&numero);
+	
+
+	switch(numero)
+	{
+		case 1:
+			printf("Janeiro \n");
+			break;
+
+		case 2:
+		printf("Fevereiro \n");
+		break;
+
+		case 3:
+		printf("Março \n");
+		break;
+
+		case 4:
+		printf("Abril \n");
+		break;
+
+		case 5:
+		printf("Maio \n");
+		break;
+
+		case 6:
+		printf("Junho \n");
+		break;
+
+		case 7:
+		printf("Julho \n");
+		break;
+
+		case 8:
+		printf("Agosto \n");
+		break;
+
+		case 9:
+		printf("Setembro \n");
+		break;
+
+		case 10:
+		printf("Outubro \n");
+		break;
+
+		case 11:
+		printf("Novembro \n");
+		break;
+
+		case 12:
+		printf("Dezembro \n");
+		break;
+
+		
+		default:
+		printf("Este numero nao está no intervalo determinado! \n");
+
+	}
 }
 
-//19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o mesmo número de pontos, criar um programa que informe se uma equipe foi classificada, de acordo com a seguinte especificação:
+//19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores para cada estado.
+// Sabendo-se que os arqueiros de uma equipe não obtiveram o mesmo número de pontos,
+// criar um programa que informe se uma equipe foi classificada, de acordo com a seguinte especificação:
 //• Ler os pontos obtidos por cada jogador da equipe;
 //• Mostrar esses valores em ordem decrescente;
 //• Se a soma dos pontos for maior do que 100, imprimir a média aritmética entre eles, caso contrário, imprimir a mensagem "Equipe desclassificada".
 void questao19() {
-	
+	int pontos1,pontos2,pontos3,total;
+	printf(" Insira sua pontuação \n");
+	scanf(" %d",&pontos1);
+	printf(" Insira sua pontuação \n");
+	scanf(" %d",&pontos2);
+	printf(" Insira sua pontuação \n");
+	scanf(" %d",&pontos3);
+    total=pontos1+pontos2+pontos3;
+	if(total>100){
+		  printf("A média aritmetica da pontuação é de %d \n",total/3);
+		}
+		else
+		printf("equipe desclassificada \n");
+	if(pontos1>pontos2 && pontos2>pontos3)
+	{
+		printf("%d , %d, %d \n",pontos1,pontos2,pontos3);
+	}
+	else
+	if(pontos1>pontos3 && pontos3>pontos2)
+	{
+		printf("%d , %d, %d \n",pontos1,pontos3,pontos2);
+	}
+	else
+	if(pontos3>pontos1 && pontos1>pontos2)
+	{
+		printf("%d , %d, %d \n",pontos3,pontos1,pontos2);
+	}
+	else
+	if(pontos3>pontos2 && pontos2>pontos1)
+	{
+		printf("%d , %d, %d \n",pontos3,pontos2,pontos1);
+	}
+	else
+	if(pontos2>pontos1 && pontos1>pontos3)
+	{
+		printf("%d , %d, %d \n",pontos2,pontos1,pontos3);
+	}
+	else
+	if(pontos2>pontos3 && pontos3>pontos1)
+	{
+		printf("%d , %d, %d \n",pontos2,pontos3,pontos1);
+	}
 }
 
 //20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de acordo com o saldomédio no último ano. Faça um programa que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela a seguir. O programa deve imprimir uma mensagem informando o saldo médio e o valor de crédito.
