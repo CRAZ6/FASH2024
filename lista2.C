@@ -522,25 +522,62 @@ void questao19() {
 	}
 }
 
-//20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de acordo com o saldomédio no último ano. Faça um programa que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela a seguir. O programa deve imprimir uma mensagem informando o saldo médio e o valor de crédito.
+//20. O banco XXX concederá um crédito especial com juros de 2% aos seus clientes de acordo com o saldomédio no último ano. 
+//Faça um programa que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela a seguir. 
+//O programa deve imprimir uma mensagem informando o saldo médio e o valor de crédito.
 //Saldo Médio Percentual
 //de 0 a 500 nenhum crédito
 //de 501 a 1000 30% do valor do saldo médio
 //de 1001 a 3000 40% do valor do saldo médio
 //acima de 3001 50% do valor do saldo médio
 void questao20() {
-	
+	float saldome;
+	printf(" Insira seu saldo medio \n");
+	scanf(" %f",&saldome);
+	if(saldome>=0 && saldome<=500){
+		  printf("O seu saldo medio e de %.2f e não terá crédito \n",saldome);
+		}
+		else
+		if(saldome>=501 && saldome<=1000){
+		  printf("O seu saldo medio e de %.2f e o credito será de %.2f \n",saldome, saldome*0.30);
+		}
+		else
+		if(saldome>=1001 && saldome<=3000){
+		  printf("O seu saldo medio e de %.2f e o credito sera de %.2f \n",saldome, saldome*0.40);
+		}
+		else
+		if(saldome>3001){
+		  printf("O seu saldo medio e de %.2f e o credito sera de %.2f \n",saldome, saldome*0.50);
+		}
+		
 }
 
-//21. A biblioteca de uma Universidade deseja fazer um programa que leia o nome do livro que será emprestado, o tipo de usuário (professor ou aluno) e possa imprimir um recibo conforme mostrado a seguir. Considerar que o professor tem dez dias para devolver o livro e o aluno só três dias.
+//21. A biblioteca de uma Universidade deseja fazer um programa que leia o nome do livro que será emprestado, 
+//o tipo de usuário (professor ou aluno) e possa imprimir um recibo conforme mostrado a seguir.
+// Considerar que o professor tem dez dias para devolver o livro e o aluno só três dias.
 //• Nome do livro:
 //• Tipo de usuário:
 //• Total de dias:
 void questao21() {
-	
+	float saldome;
+	char nome[50];
+	char tipo;
+	printf("Insira o nome do livro \n");
+	scanf(" %50[^\n]",&nome[0]);
+	printf("Coloque p para professor e a para aluno");
+	scanf(" %c",&tipo);
+	if(tipo=='a')
+	{
+		  printf("• Nome do livro: %s \n  • Tipo de usuário: %c \n • Total de dias: 3 dias \n",nome,tipo);
+	}else if (tipo=='p'){
+		printf("• Nome do livro: %s \n  • Tipo de usuário: %c \n • Total de dias: 10 dias \n",nome,tipo);
+	} else {
+		printf("tipo invalido!")
+	}
 }
 
-//22. Construa um programa que leia o percurso em quilómetros, o tipo do carro e informe o consumo estimado de combustível, sabendo-se que umcarro tipo C faz 12 kmcom umlitro de gasolina, um tipo B faz 9 kme o tipo C, 8 kmpor litro.
+//22. Construa um programa que leia o percurso em quilómetros, o tipo do carro e informe o consumo estimado de combustível,
+// sabendo-se que umcarro tipo C faz 12 kmcom umlitro de gasolina, um tipo B faz 9 kme o tipo C, 8 kmpor litro.
 void questao22() {
 	
 }
