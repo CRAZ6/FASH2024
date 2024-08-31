@@ -559,7 +559,6 @@ void questao20() {
 //• Tipo de usuário:
 //• Total de dias:
 void questao21() {
-	float saldome;
 	char nome[50];
 	char tipo;
 	printf("Insira o nome do livro \n");
@@ -572,23 +571,40 @@ void questao21() {
 	}else if (tipo=='p'){
 		printf("• Nome do livro: %s \n  • Tipo de usuário: %c \n • Total de dias: 10 dias \n",nome,tipo);
 	} else {
-		printf("tipo invalido!")
+		printf("tipo invalido!");
 	}
 }
 
 //22. Construa um programa que leia o percurso em quilómetros, o tipo do carro e informe o consumo estimado de combustível,
-// sabendo-se que umcarro tipo C faz 12 kmcom umlitro de gasolina, um tipo B faz 9 kme o tipo C, 8 kmpor litro.
+// sabendo-se que um carro tipo A faz 12 km com umlitro de gasolina, um tipo B faz 9 km e o tipo C, 8 km por litro.
 void questao22() {
-	
+	float per,cons1,cons2,cons3;
+	char tipo;
+	printf("Insira o percurso em quilometros: \n");
+	scanf(" %f",&per);
+	printf("Coloque o tipo do seu carro \n");
+	scanf(" %c",&tipo);
+	cons1=12*per;
+	cons2=9*per;
+	cons3=8*per;
+	if(tipo=='a'){
+	printf("O consumo estimado do seu carro será de %.2f litros",cons1);}
+	if(tipo=='b'){
+	printf("O consumo estimado do seu carro será de %.2f litros",cons2);}
+	if(tipo=='c'){
+	printf("O consumo estimado do seu carro será de %.2f litros",cons3);}
 }
 
-//23. Crie um programa que informe a quantidade total de calorias de uma refeição a partir da escolha do usuário que deverá informar o prato, a sobremesa, e bebida conforme a tabela a seguir.
+//23. Crie um programa que informe a quantidade total de calorias de uma refeição a partir da escolha do usuário que deverá informar o prato,
+// a sobremesa, e bebida conforme a tabela a seguir.
 //Prato Sobremesa Bebida
 //Vegetariano 180cal Abacaxi 75cal Chá 20cal
 //Peixe 230cal Sorvete diet 110cal Suco de laranja 70cal
 //Frango 250cal Mousse diet 170cal Suco de melão 100cal
 //Carne 350cal Mousse chocolate 200cal Refrigerante diet 65cal
 void questao23() {
+float per,cons1,cons2,cons3;
+	char ;
 
 }
 
